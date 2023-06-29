@@ -2,7 +2,15 @@
     margin: 0px;
     padding: 0px;
 }
-
+body::-webkit-scrollbar {
+    width: 8px;
+    background: #000000b0;
+}
+body::-webkit-scrollbar-thumb {
+    
+    background-color: #f59b14;
+    border-radius: 5px;
+}
 
 
 /*--------------MENU-------------*/
@@ -23,6 +31,7 @@
     position: fixed;
     z-index: 99;
     margin-bottom: 5%;
+    box-shadow: 0px 0px 10px;
 }
 
 ul,
@@ -256,7 +265,6 @@ ul.slider li:target {
 }
 
 .carruselback {
-    background-image: url(IMG/carruselfondo.png);
     background-color: #f59b14;
     height: 500px;
     text-align: center;
@@ -437,18 +445,20 @@ ul.slider li:target {
 .descripcionJ {
     padding: 5%;
     color: #f59b14da;
-    text-align: center;
+    text-align: justify;
     display: flex;
     border-radius: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 .descripcionP {
     background-color: #f59b14af;
     padding: 5%;
     color: black;
-    text-align: center;
+    text-align: justify;
     display: flex;
     border-radius: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
 .descripcionJumpsuit {
@@ -457,8 +467,80 @@ ul.slider li:target {
     color: #f59b14;
     text-align: center;
     border-radius: 5px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
+
+
+
+
+/*--------------ARTE-------------*/
+
+.arte{
+    background-image: url(IMG/juegosback.png);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-align: center;
+    color: #f59b14;
+    padding: 5%;
+}
+
+
+.artelogo{
+    padding: 5%;
+    text-align: center;
+    border-radius: 10px;
+    color: #f59b14;
+    box-shadow: 0px 1px 20px #f59b14;
+    
+}
+
+.pintura{
+    display: flex;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-shadow: #f59b14 0px 1px 20px;
+    margin: 10%;
+    border-radius: 10px;
+}
+
+.pinturaleft{
+    background-color: #000000;
+    text-align: left;
+    color: #f59b14;
+    border: #f59b14 solid 3px;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+.pinturaright{
+    background-color: #f59b14;
+    text-align: right;
+    color: black;
+    border: black solid 3px;
+    padding: 1%;
+    border-radius: 10px;
+}
+
+
+.artebannerback{
+    background-image: url(IMG/jumpsuit_banner3.png);
+    color: whitesmoke;
+    text-shadow: 0px 1px 10px #f59b14;
+    border: solid #f59b14 ;
+    text-align: center;
+    font-size: 50px;
+    padding-top: 20%;
+    margin: 5%;
+}
+
+
+.artetxt{
+    margin: 10%;
+    text-align: center;
+    color: whitesmoke;
+    border: solid #f59b14 3px;
+    font-size: 35px;
+    text-shadow: 0px 1px 10px #f59b14;
+}
 
 
 
