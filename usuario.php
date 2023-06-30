@@ -1,3 +1,16 @@
+<?php
+  include('conexion.php');
+
+
+  $con = connection();
+
+  $sql = "SELECT * FROM users";
+  $query =mysqli_query($con, $sql);
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -45,28 +58,36 @@
     <h1 data-aos="fade-up" data-aos-duration="2000">USUSARIO</h1>
   </div>
 
+
+ 
+
   <section class="usuario">
     <h1 class="usuariotxt"> Ingresa con tu cuenta o crea una nueva</h1>
+    <?php while($row = mysqli_fetch_array($query)):?>
     <div class="formulario">
-      <section class="form-register">
-        <h4>Cuenta de Usuario</h4>
-        <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre">
-        <input class="controls" type="text" name="apellidos" id="apellidos" placeholder="Ingrese su Apellido">
-        <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
-        <input class="controls" type="text" name="numero" id="numero" placeholder="Telefono (Opcional)">
-        <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña">
-        <p>
-          <font color="gray"> Estoy de acuerdo con <a href="#">
+      <form action = "BD/insertuser.php" method="POST">
+        <section class="form-register">
+          <h4>Cuenta de Usuario</h4>
+          <input class="controls" type="text" name="nombres" id="nombres" placeholder="Ingrese su Nombre"> 
+          <input class="controls" type="email" name="correo" id="correo" placeholder="Ingrese su Correo">
+          <input class="controls" type="password" name="contraseña" id="contraseña" placeholder="Ingrese su Contraseña">
+          <p>
+            <font color="gray"> Estoy de acuerdo con <a href="#">
               <font color="gray">Terminos y Condiciones
             </a>
-        </p>
-        <input class="botons" type="submit" value="COMPRAR">
-        <p><a href="#">
+          </p>
+          <input class="botons" type="submit" value="REGISTRARSE">
+          <p><a href="#">
             <font color="gray">¿Ya tienes una cuenta?
-          </a></p>
-      </section>
+            </a>
+          </p>
+        </section>
+      </form>
     </div>
+    <?php endwhile; ?>
   </section>
+  
+  
 
 
   <section>
