@@ -1,19 +1,23 @@
 <?php
 
-include('conexion.php');
+include('connection.php');
+
+
+$id_usuario = null;
+$nombre = $_POST['nombre'];
+$apellido = $_POST['apellido'];
+$email = $_POST['email'];
+$contraseña = $_POST['contraseña'];
 
 $con = connection();
 
-$id = null;
-$nombres = $_POST['nombres'];
-$correo = $_POST['correo'];
-$contraseña = $_POST['contraseña'];
+$sql = "INSERT INTO usuario VALUES ('$id_usuario','$nombre','$apellido', '$email','$contraseña')";
 
-$sql = "INSERT INTO usuario VALUES ('$id','$nombres', '$correo','$contraseña')";
-$query =mysqli_query($con, $sql);
+$query = mysqli_query($con,$sql);
 
-if($query ){
-    header("Location: index.html");
+
+if($query){
+    header("Location: login.php");
 };
 
 ?>
