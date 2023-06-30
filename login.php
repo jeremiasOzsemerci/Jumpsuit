@@ -1,5 +1,5 @@
 <?php
-include('BD/connection.php');
+include('connection.php');
 
 
 $con = connection();
@@ -64,7 +64,7 @@ $query = mysqli_query($con, $sql);
     <h1 class="usuariotxt"> Ingresa con tu cuenta o crea una nueva</h1>
 
     <div class="formulario">
-      <form action="BD/insertuser.php" method="POST">
+      <form action="insertuser.php" method="POST">
         <section class="form-register">
           <h4>Cuenta de Usuario</h4>
           <input class="controls" type="text" name="nombre" id="nombre" placeholder="Ingrese su Nombre">
